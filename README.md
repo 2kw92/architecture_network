@@ -108,3 +108,15 @@ Hosts: 62
 ```git clone https://github.com/2kw92/architecture_network```      
 Далее       
 ```vagrant up```        
+Теперь заходим например на office1Server.sh и там выполняем:       
+```tracepath wikipedia.org```      
+И получаем вот такой ответ:
+```
+[vagrant@office1Server ~]$ tracepath wikipedia.org
+ 1?: [LOCALHOST]                                         pmtu 1500
+ 1:  gateway                                               0.893ms
+ 1:  gateway                                               0.605ms
+ 2:  192.168.254.1                                         1.142ms
+ 3:  192.168.255.1                                         1.622ms
+```      
+ЧТо вполне соответсвует поставленной задаче
